@@ -121,9 +121,8 @@
         width: 100%;
     }
 
-    .logotipo{
-        color: var(--branco);
-        font-size: 26px;
+    .logo{
+        height: 66px;
     }
 
     .cabecalho-claro input{
@@ -252,6 +251,7 @@
         max-width: 1300px;
         overflow-x: auto;
         scrollbar-width: none;
+        margin-bottom: 15px;
     }
 
     .rolagem::-webkit-scrollbar {
@@ -675,7 +675,7 @@
         flex-direction: column;
         padding: 10px;
         text-align: center;
-        height: 100px;
+        height: 140px;
     }
     .reparticao {
         padding-left: 20px;
@@ -721,7 +721,7 @@
         width: 100%;
     }
     .carrossel {
-        margin-top: 40px;
+        margin-top: 70px;
     }
 }
 

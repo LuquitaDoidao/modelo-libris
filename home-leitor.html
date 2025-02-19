@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Libris</title>
 </head>
-<body>
+<body class="home-leitor">
     <header class="container-fluid">
         <section class="row  cabecalho-claro2">
             <div class="col-5 d-flex justify-content-center align-items-center">
@@ -23,16 +23,16 @@
         </section>
 
         <section class="row cabecalho-escuro2">
-            <div class="col-5 d-flex">
-                <div class="d-flex navegacao2">
+            <div class="col-5 d-flex align-items-center">
+                <div class="d-flex navegacao2 align-items-center">
                     <p>Genero</p>
                     <i>arrow_drop_down</i>
                 </div>
-                <div class="d-flex navegacao2">
+                <div class="d-flex navegacao2 align-items-center">
                     <p>Minha lista</p>
                     <i>list</i>
                 </div>
-                <div class="d-flex navegacao2">
+                <div class="d-flex navegacao2 align-items-center">
                     <p>Notificações</p>
                     <i>notifications</i>
                 </div>
@@ -40,8 +40,36 @@
         </section>
     </header>
 
-    <main>
+    <div class="espaco-vazio"></div>
 
+    <main class="container-fluid">
+        <section class="row">
+            <div class="col-12 carousel">
+                <div class="carousel-images">
+                    <img src="assets/img/carrossel1.png" alt="Imagem 1">
+                    <img src="assets/img/carrossel2.png" alt="Imagem 2">
+                    <img src="assets/img/carrossel3.png" alt="Imagem 3">
+                    <img src="assets/img/carrossel4.png" alt="Imagem 4">
+                    <img src="assets/img/carrossel5.png" alt="Imagem 5">
+                </div>
+            </div>
+            
+            <div class="col-12 dots">
+                <span class="dot" onclick="moveSlide(0)"></span>
+                <span class="dot" onclick="moveSlide(1)"></span>
+                <span class="dot" onclick="moveSlide(2)"></span>
+                <span class="dot" onclick="moveSlide(3)"></span>
+                <span class="dot" onclick="moveSlide(4)"></span>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-12 gx-20 d-flex reparticao">
+                <p class="titulo">Recomendados</p>
+                <p class="subtitulo">Uma seleção feita para você!</p>
+            </div>
+
+        </section>
 
     </main>
     

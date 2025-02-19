@@ -56,18 +56,41 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 });
 
-//=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= MUDAR A IMAGEM DO CARROSSEL (MAIN) =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=//
+//=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= MUDAR A IMAGEM DO CARROSSEL (MENU) =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=//
 
-let indiceSlide = 0;
-const slides = document.querySelectorAll(".imagem-carrossel");
+let index = 0;
+        const images = document.querySelector(".carousel-images");
+        const dots = document.querySelectorAll(".dot");
+        let interval;
 
-function mudarSlide(valor) {
-    slides[indiceSlide].classList.remove("ativo"); 
-    indiceSlide = (indiceSlide + valor + slides.length) % slides.length; 
-    slides[indiceSlide].classList.add("ativo"); 
-}
-
-setInterval(() => mudarSlide(1), 20000);
+        function moveSlide(n) {
+            index = n;
+            images.style.transform = `translateX(-${index * 100}%)`;
+            updateDots();
+            resetTimer();
+        }
+        
+        function updateDots() {
+            dots.forEach(dot => dot.classList.remove("active"));
+            dots[index].classList.add("active");
+        }
+        
+        function nextSlide() {
+            index = (index + 1) % dots.length;
+            moveSlide(index);
+        }
+        
+        function startAutoSlide() {
+            interval = setInterval(nextSlide, 20000);
+        }
+        
+        function resetTimer() {
+            clearInterval(interval);
+            startAutoSlide();
+        }
+        
+        startAutoSlide();
+        updateDots();
 
 //=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= AVALIAR LIVRO ESTRELAS (LIVRO-INFORMA) =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=//
 

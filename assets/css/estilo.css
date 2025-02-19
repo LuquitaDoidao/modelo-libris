@@ -106,6 +106,10 @@
         background-color: #FAFAFA;
     }
 
+    .home-leitor{
+        background-color: #FAFAFA;
+    }
+
     /*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= PAGINA INICIAL - CABEÇALHO =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
 
     header{
@@ -119,6 +123,11 @@
         background: var(--degrade-claro);
         height: 62px;
         width: 100%;
+    }
+
+    .cabecalho-claro2{
+        background: var(--degrade-claro);
+        height: 62px;
     }
 
     .logo{
@@ -136,8 +145,26 @@
         color:var(--cinza);
         outline: none;
     }
+
+    .cabecalho-claro2 input{
+        height: 47px;
+        width: 500px;
+        border-radius: 25px;
+        border: none;
+        background-color: var(--branco);
+        font-size: 19px;
+        padding-left: 15px;
+        color:var(--cinza);
+        outline: none;
+    }
     
     .cabecalho-claro input:focus{
+        border: 3px solid var(--verde);
+        color: var(--preto);
+        background-color: #d9d9d9;
+    }
+
+    .cabecalho-claro2 input:focus{
         border: 3px solid var(--verde);
         color: var(--preto);
         background-color: #d9d9d9;
@@ -151,6 +178,15 @@
         color: var(--branco);
     }
 
+    .conta2{
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-size: 45px;
+        margin-left: 40px;
+        color: var(--branco);
+        text-decoration: none;
+    }
+
     
     .cabecalho-escuro{
         background: var(--degrade-escuro);
@@ -160,12 +196,29 @@
         justify-content: flex-end;
     }
 
+    .cabecalho-escuro2{
+        background: var(--degrade-escuro);
+        height: 42px;
+        justify-content: flex-end;
+    }
+
     .navegacao{
         display: flex;
         align-items: center;
         justify-content: center;
 
         margin-right: 10px;
+    }
+
+    .navegacao2{
+        margin-right: 10px;
+    }
+
+    .navegacao2 p{
+        color: var(--branco);
+        font-size: 19px;
+        padding: 0px 10px;
+        margin: 0;
     }
 
     .navegacao p{
@@ -182,6 +235,10 @@
         background-color: #03124d60;
     }
 
+    .navegacao2:hover{
+        background-color: #03124d60;
+    }
+
     .navegacao:hover p{
         text-decoration: underline;
     }
@@ -194,15 +251,65 @@
         color: var(--branco);
     }
 
+    .navegacao2 i{
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-size: 24px;
+        margin-right: 10px;
+        color: var(--branco);
+    }
+
     .espaco-vazio{
-        height: 104px;
+        height: 110px;
     }
 
     /*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= PÁGINA INICIAL - MAIN =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
 
     /* carrossel */
+
+    .carousel {
+        position: relative;
+        width: 100%;  /* Usar 100% para ocupar toda a largura disponível */
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .carousel-images {
+        display: flex;
+        transition: transform 1.5s ease-in-out;
+        width: 100%;
+    }
+    .carousel-images img {
+        width: 100%;  
+        flex-shrink: 0;
+    }
+
+    .dots {
+        text-align: center;
+        padding: 10px;
+    }
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 5px;
+        background-color: #bbb;
+        border-radius: 50px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .dot:hover {
+        height: 13px;
+        width: 13px;
+    }
+
+    .active {
+        background-color: var(--azul-claro);
+        height: 15px;
+        width: 15px;
+    }
     
-    .carrossel{
+    /* .carrossel{
         z-index: 8;
         margin-top: 20px;
         position: relative;
@@ -226,25 +333,28 @@
 
     .ativo{
         opacity: 1;
-    }
+    } */
 
     /* conteúdo */
 
     .reparticao{
         padding-left: 120px;
-        margin-top: 30px;
+        align-items: center;
+        gap:10px;
     }
 
     .reparticao .titulo{
         color: var(--azul-claro);
         font-size: 30px;
         font-weight: bold;
+        margin: 0;
     }
 
     .reparticao .subtitulo{
         color: var(--cinza);
         font-size: 25px;
         margin-left: 10px;
+        margin: 0;
     }
 
     .rolagem{

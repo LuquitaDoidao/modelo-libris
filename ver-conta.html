@@ -5,29 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/estilo.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Libris</title>
 </head>
 <body class="pagina-ver-conta">
-    <header>
-        <section class="d-flex-eve estreita cabecalho-claro ">
-            <a href="index.html"><img class="logo" src="assets/img/logo-branca.png" alt="logo do site"></a>
-            <div class="estreita">
+    <header class="container-fluid">
+        <section class="row  d-flex cabecalho-claro2">
+            <div class="col-lg-5 col-sm-3 d-flex justify-content-center align-items-center">
+                <img class="logo" src="assets/img/logo-branca.png" alt="logo do site">
+            </div>
+
+            <div class="col-lg-6 col-sm-6 d-flex justify-content-center align-items-center">
                 <input id="campo-busca" placeholder="O que você quer ler hoje?">
-                <a href="ver-conta.html"><i class="conta">account_circle</i></a>
+            </div>
+            <div class="col-lg-1 col-sm-3 justify-content-center align-items-center">
+                <a href="ver-conta.html"><i class="conta2">account_circle</i></a>
             </div>
         </section>
 
-        <section class="d-flex cabecalho-escuro">
-            <div class="d-flex estreita">
-                <div class="d-flex navegacao pointer">
-                    <p>Gênero</p>
+        <section class="row cabecalho-escuro2">
+            <div class="col-12 d-flex align-items-center">
+                <div class="d-flex navegacao2 align-items-center">
+                    <p>Genero</p>
                     <i>arrow_drop_down</i>
                 </div>
-                <div class="d-flex navegacao pointer">
+                <div class="d-flex navegacao2 align-items-center">
                     <p>Minha lista</p>
                     <i>list</i>
                 </div>
-                <div class="d-flex navegacao pointer">
+                <div class="d-flex navegacao2 align-items-center">
                     <p>Notificações</p>
                     <i>notifications</i>
                 </div>
@@ -37,19 +44,25 @@
 
     <div class="espaco-vazio"></div>
 
-    <main class="">
-        <section class="d-flex estreita">
-            <div>
-                <i class="foto-conta">account_circle</i>
+    <main class="container-fluid">
+        <section class="row align-items-center">
+            <div class="col-6">
+                <img class="foto-conta" src="assets/img/sorriso.jpg">
             </div>
-
-            <div class="informacoes">
-                <div class="muda-modo">
-                    <i>light_mode</i>
+    
+            <div class="col-6">
+                <div class="row">
+                    <div class="informacoes2 col-12">
+                        <p class="nome">Leandro de Rosalina Veracruz</p>
+                        <p class="email">leandroveracruz@gmail.com</p>
+                        <p class="fone">+55 18 12345-6789</p>
+                    </div>
+    
+                    <div class="botoes col-12">
+                        <p class="agendamento botao-fundo-transparente">Sair da conta</p>
+                        <p class="emprestimo botao-fundo-azul">Editar conta</p>
+                    </div>
                 </div>
-                <p class="nome">Leandro de Rosalina Veracruz</p>
-                <p class="email">leandroveracruz@gmail.com</p>
-                <p class="fone">+55 18 12345-6789</p>
             </div>
         </section>
 

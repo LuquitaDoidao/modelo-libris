@@ -8,7 +8,6 @@
 }
 
 /*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= COLA =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
-
 .d-flex{
     display: flex;
 }
@@ -68,7 +67,7 @@
     padding: 7px 25px;
     border-radius: 50px;
     font-weight: bold;
-
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,6 +362,7 @@
         cursor: pointer;
         transition: 0.5s;
     }
+
 
     .dot:hover {
         height: 13px;
@@ -787,31 +787,102 @@
         padding: 5px 170px;
     }
 
-    .foto-conta{
-        width: 480px;
-        height: 480px;
-        border-radius: 500px;
-
-        background-repeat: no-repeat;
-        background-size: cover; 
-        background-position: bottom center;
+    .pagina-ver-conta .informacoes{
+        margin-left: 500px;
     }
 
-    .informacoes2 .nome{
+    .foto-conta{
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-size: 450px;
+        color: #000000;
+    }
+
+    .pagina-ver-conta .muda-modo{
+        background-color: transparent;
+        width: 90px;
+        height: 37px;
+        border-radius: 50px;
+        border: 3px solid var(--azul-claro);
+
+        display: flex;
+        align-items: center;
+        padding: 2px;
+    }
+
+    .muda-modo i{
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-size: 25px;
+        color: var(--branco);
+        background-color: var(--azul-claro);
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pagina-ver-conta .informacoes{
+        margin-left: 10px;
+    }
+
+    .informacoes .nome{
         color: var(--azul-escuro);
         font-weight: bold;
         font-size: 35px;
     }
 
-    .informacoes2 .email{
+    .informacoes .email{
         color: #aaaaaa;
         font-size: 25px;
         margin-top: 5px;
     }
 
-    .informacoes2 .fone{
+    .informacoes .fone{
         color: #aaaaaa;
         font-size: 25px;
         margin-top: 5px;
     }
 
+/*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= PAGINA LOGIN =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
+
+    .modal-login{
+        padding: 50px;
+    }
+    .modal-login img{
+        height: 50px;
+    }  
+    .modal-login2{
+        padding-top: 40px;
+        border-radius: 10px;
+        height: 530px;
+    }
+    .modal-login2 button{
+        width: 235px;
+    }
+    .modal-login2 a{
+        width: 235px;
+    }
+    .gap-ss{
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+    .gap-s{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .gap-m{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .livro{
+        height: 300px;
+        width: 300px;
+    }
+    

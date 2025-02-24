@@ -81,7 +81,7 @@ let index = 0;
         }
         
         function startAutoSlide() {
-            interval = setInterval(nextSlide, 20000);
+            interval = setInterval(nextSlide, 10000);
         }
         
         function resetTimer() {
@@ -114,3 +114,4 @@ stars.forEach((star, index) => {
         stars.forEach(s => s.classList.remove('hovered'));
     });
 });
+

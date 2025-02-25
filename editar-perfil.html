@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Libris</title>
 </head>
-<body class="pagina-ver-conta">
+<body class="pagina-edicao-usuario">
     <header class="container-fluid">
         <section class="row  d-flex cabecalho-claro2">
             <div class="col-lg-5 col-sm-3 d-flex justify-content-center align-items-center">
@@ -27,7 +27,7 @@
         <section class="row cabecalho-escuro2">
             <div class="col-12 d-flex align-items-center">
                 <div class="d-flex navegacao2 align-items-center">
-                    <p>Genero</p>
+                    <p>Gênero</p>
                     <i>arrow_drop_down</i>
                 </div>
                 <div class="d-flex navegacao2 align-items-center">
@@ -46,30 +46,41 @@
 
     <main class="container-fluid">
         <section class="row align-items-center">
-            <div class="col-6">
+            <div class="col-2"></div>
+            <div class="col-4">
                 <img class="foto-conta" src="assets/img/sorriso.jpg">
             </div>
     
             <div class="col-6">
                 <div class="row">
-                    <div class="informacoes2 col-12">
-                        <p class="nome">Leandro de Rosalina Veracruz</p>
-                        <p class="email">leandroveracruz@gmail.com</p>
-                        <p class="fone">+55 18 12345-6789</p>
-                    </div>
-    
-                    <div class="botoes col-12">
-                        <p class="agendamento botao-fundo-transparente">Sair da conta</p>
-                        <p class="emprestimo botao-fundo-azul">Editar conta</p>
+                    <div class="formulario col-12">
+                        <p>Nome</p> 
+                        <input class="nome-edita" type="text" placeholder="seu nome" required >
+                        <p>email</p>
+                        <input class="email-edita" type="email" placeholder="seu email" required >
+                        <p>telefone</p>
+                        <input class="fone-edita" type="number" placeholder="seu telefone" required >
+                        <p>endereco</p>
+                        <input class="endereco-edita" type="text" placeholder="seu endereco" required >
+
+                        <p>Senha</p>
+                        <input class="senha-edita" type="password" placeholder="sua senha" required >
+                        <p>Confirma Senha</p>
+                        <input class="senha-edita-c" type="password" placeholder="sua senha... de novo" required >
+
+                        <div class="d-flex-bit cc">
+                            <a href="index.html"><button class="botao-fundo-transparente">Cancelar</button></a>
+                            <a href="index.html"><button class="botao-fundo-azul" type="submit">Salvar</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
-    <footer class="centraliza estreita">
-        <p>@2025TodosDireitosReservados</p>
-    </footer>
+
+    <section>
+
+    </section>
 
     <script src="assets/js/animacao-index.js"></script>
 </body>

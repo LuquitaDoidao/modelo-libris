@@ -5,37 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/estilo.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Libris</title>
 </head>
-<body>
-    <header>
-        <section class="d-flex-eve estreita cabecalho-claro">
-            <a href="index.html"><p class="logotipo">Libris</p></a>
-            <div class="estreita">
+<body class="home-leitor">
+    <header class="container-fluid">
+        <section class="row  d-flex cabecalho-claro2">
+            <div class="col-lg-5 col-sm-3 d-flex justify-content-center align-items-center">
+                <img class="logo" src="assets/img/logo-branca.png" alt="logo do site">
+            </div>
+
+            <div class="col-lg-6 col-sm-6 d-flex justify-content-center align-items-center">
                 <input id="campo-busca" placeholder="O que você quer ler hoje?">
-                <a href="ver-conta.html"><i class="conta">account_circle</i></a>
+            </div>
+            <div class="col-lg-1 col-sm-3 justify-content-center align-items-center">
+                <a href="ver-conta.html"><i class="conta2">account_circle</i></a>
             </div>
         </section>
 
-        <section class="d-flex cabecalho-escuro">
-            <div class="d-flex estreita">
-                <div class="d-flex navegacao pointer">
+        <section class="row cabecalho-escuro2">
+            <div class="col-12 d-flex align-items-center">
+		        <div class="d-flex navegacao2 align-items-center">
                     <p>Adicionar Livro</p>
                     <i>alibrary_add</i>
                 </div>
-                <div class="d-flex navegacao pointer">
+                <div class="d-flex navegacao2 align-items-center">
                     <p>Minha lista</p>
                     <i>list</i>
                 </div>
-                <div class="d-flex navegacao pointer">
+                <div class="d-flex navegacao2 align-items-center">
                     <p>Notificações</p>
                     <i>notifications</i>
                 </div>
-                <div class="d-flex navegacao pointer">
+                <div class="d-flex navegacao2 align-items-center">
                     <p>Multas</p>
                     <i>attach_money</i>
                 </div>
-                <div class="d-flex navegacao pointer">
+                <div class="d-flex navegacao2 align-items-center">
                     <p>Lista de Usuarios</p>
                     <i>group</i>
                 </div>
@@ -45,285 +52,119 @@
 
     <div class="espaco-vazio"></div>
 
-    <main>
-        <section class="centraliza">
-            <div class="carrossel pointer">
-                <img src="assets/img/carrossel1.png" alt="" class="imagem-carrossel ativo">
-                <img src="assets/img/carrossel2.png" alt="" class="imagem-carrossel">
-                <img src="assets/img/carrossel3.png" alt="" class="imagem-carrossel">
+    <main class="container-fluid">
+        <section class="row">
+            <div class="col-12 carousel">
+                <div class="carousel-images">
+                    <img src="assets/img/carrossel1.png" alt="Imagem 1">
+                    <img src="assets/img/carrossel2.png" alt="Imagem 2">
+                    <img src="assets/img/carrossel3.png" alt="Imagem 3">
+                    <img src="assets/img/carrossel4.png" alt="Imagem 4">
+                    <img src="assets/img/carrossel5.png" alt="Imagem 5">
+                </div>
+            </div>
+            
+            <div class="col-12 dots">
+                <span class="dot" onclick="moveSlide(0)"></span>
+                <span class="dot" onclick="moveSlide(1)"></span>
+                <span class="dot" onclick="moveSlide(2)"></span>
+                <span class="dot" onclick="moveSlide(3)"></span>
+                <span class="dot" onclick="moveSlide(4)"></span>
             </div>
         </section>
 
-        <section class="reparticao">
-            <div class="d-flex estreita">
+        <section class="row">
+            <div class="col-12 gx-20 d-flex reparticao">
+                <p class="titulo">Recomendado</p>
+                <p class="subtitulo">Uma seleção feita para você!</p>
+            </div>
+            <div class="d-flex rolagem">
+                <a href="livro-informa.html">
+                    <div class="livro col-12 ">
+                        <img class="capa-livro" src="assets/img/capa-livro.jpg" alt="">
+                        <p class="nome-livro">Vermelho Branco e Sangue Azul</p>
+                    </div>
+                </a>
+
+                <a href="livro-informa.html">
+                    <div class="livro col-12 ">
+                        <img class="capa-livro" src="assets/img/capa-livro.jpg" alt="">
+                        <p class="nome-livro">Vermelho Branco e Sangue Azul</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-12 gx-20 d-flex reparticao">
                 <p class="titulo">Recomendados</p>
                 <p class="subtitulo">Uma seleção feita para você!</p>
             </div>
-            <div class="rolagem d-flex">
+            <div class="d-flex rolagem">
                 <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
+                    <div class="livro col-12 ">
+                        <img class="capa-livro" src="assets/img/capa-livro.jpg" alt="">
+                        <p class="nome-livro">Vermelho Branco e Sangue Azul</p>
                     </div>
                 </a>
-
                 <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
+                    <div class="livro col-12 ">
+                        <img class="capa-livro" src="assets/img/capa-livro.jpg" alt="">
+                        <p class="nome-livro">Vermelho Branco e Sangue Azul</p>
                     </div>
                 </a>
-
                 <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
-                    </div>
-                </a>
-
-                <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
-                    </div>
-                </a>
-
-                <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
-                    </div>
-                </a>
-
-                <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
-                    </div>
-                </a>
-
-                <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
-                    </div>
-                </a>
-
-                <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
-                    </div>
-                </a>
-
-                <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
-                    </div>
-                </a>
-
-                <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
-                    </div>
-                </a>
-
-
-                <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
-                    </div>
-                </a>
-
-                <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
-                    </div>
-                </a>
-
-                <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
-                    </div>
-                </a>
-
-                <a href="livro-informa.html">
-                    <div class="livro">
-                        <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                        <p class="nome-livro">A Mangueira do Bombeiro</p>
+                    <div class="livro col-12 ">
+                        <img class="capa-livro" src="assets/img/capa-livro.jpg" alt="">
+                        <p class="nome-livro">Vermelho Branco e Sangue Azul</p>
                     </div>
                 </a>
             </div>
         </section>
 
-        <section class="reparticao">
-            <div class="d-flex estreita">
-                <p class="titulo">Reservados</p>
-                <p class="subtitulo">Aguardando por você...</p>
+        <section class="row">
+            <div class="col-12 gx-20 d-flex reparticao">
+                <p class="titulo">Recomendados</p>
+                <p class="subtitulo">Uma seleção feita para você!</p>
             </div>
-            <div class="rolagem d-flex">
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
+            <div class="d-flex rolagem">
+                <a href="livro-informa.html">
+                    <div class="livro col-12 ">
+                        <img class="capa-livro" src="assets/img/capa-livro.jpg" alt="">
+                        <p class="nome-livro">Vermelho Branco e Sangue Azul</p>
+                    </div>
+                </a>
 
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
+                <a href="livro-informa.html">
+                    <div class="livro col-12 ">
+                        <img class="capa-livro" src="assets/img/capa-livro.jpg" alt="">
+                        <p class="nome-livro">Vermelho Branco e Sangue Azul</p>
+                    </div>
+                </a>
+                <a href="livro-informa.html">
+                    <div class="livro col-12 ">
+                        <img class="capa-livro" src="assets/img/capa-livro.jpg" alt="">
+                        <p class="nome-livro">Vermelho Branco e Sangue Azul</p>
+                    </div>
+                </a>
             </div>
         </section>
-
-        <section class="reparticao">
-            <div class="d-flex estreita">
-                <p class="titulo">Reservados</p>
-                <p class="subtitulo">Aguardando por você...</p>
-            </div>
-            <div class="rolagem d-flex">
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-
-                <div class="livro">
-                    <img class="capa-livro" src="assets/img/Dimitri Diciocio.png" alt="">
-                    <p class="nome-livro">A Mangueira do Bombeiro</p>
-                </div>
-            </div>
-        </section>
-
-
     </main>
+
+    <section class="modal estreita centraliza">
+        <div class="quadro-aviso">
+            <p class="titulo">Fazer Empréstimo</p>
+            <p class="aviso1">Você tem certeza de quer fazer o emprestimo do livro "Vermelho Branco e Sangue Azul" de Dimitri Diciocio?</p>
+            <p class="aviso2">A devolução ficará para o dia 09/09/9099</p>
+            <div class="d-flex-eve">
+                <p class="volta botao-fundo-transparente">Voltar</p>
+                <p class="confirma botao-fundo-azul">Confirmar</p>
+            </div>
+        </div>
+    </section>
     
-    <footer class="centraliza estreita">
-        <p>@2025TodosDireitosReservados</p>
+    <footer>
+        
     </footer>
 
     <script src="assets/js/animacao-index.js"></script>

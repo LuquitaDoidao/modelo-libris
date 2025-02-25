@@ -76,6 +76,7 @@
 .botao-fundo-azul:hover{
     color: var(--branco);
     background: linear-gradient(50deg, #647fe9, #3552c4);
+    padding: 6px 25px;
 }
 
 .botao-fundo-transparente{
@@ -93,8 +94,7 @@
 
 .botao-fundo-transparente:hover{
     border: 3.3px solid var(--azul-claro);
-    background-color: #7979791a;
-    padding: 7px 27px;
+    padding: 6px 25px;
 }
 
 
@@ -792,12 +792,10 @@
     }
 
     .foto-conta{
-        width: 440px;
-        height: 440px;
-        border-radius: 500px;
-        background-repeat: no-repeat;
-        background-size: cover; 
-        background-position: bottom center;
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-size: 450px;
+        color: #000000;
     }
 
     .pagina-ver-conta .muda-modo{
@@ -887,40 +885,36 @@
         height: 300px;
         width: 300px;
     }
-  
+    .video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: -1;
+    }
     
-/*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= EDIÇÃO DE USUARIO =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
-
-    .pagina-edicao-usuario .formulario p{
-        margin-bottom: 0px;
+    .video-bg video {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+    }
+    .cabecalho-claro3 input{
+        height: 47px;
+        width: 500px;
+        border-radius: 25px;
+        background-color: var(--branco);
+        font-size: 19px;
+        padding-left: 15px;
+        color:var(--cinza);
+        outline: none;
+        border-color: var(--azul-escuro);
     }
 
-    .formulario input{
-        color: var(--azul-claro);
-        background-color: transparent;
-        border: 3px solid var(--azul-claro);
-        padding-left: 7px;
-        border-radius: 50px;
-        height: 40px;
-        width: 400px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .formulario p{
-        color: var(--azul-claro);
-        font-weight: bold;
-        padding-left: 17px;
-        margin-top: 10px;
-    }
-
-    .formulario .endereco-edita{
-        margin-bottom: 50px;
-    }
-
-    .formulario .cc{
-        margin-top: 20px;
-        width: 400px;
+    .cabecalho-claro3 input:focus{
+        border: 3px solid var(--verde);
+        color: var(--preto);
+        background-color: #d9d9d9;
     }

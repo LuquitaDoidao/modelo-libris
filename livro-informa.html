@@ -7,29 +7,36 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Libris</title>
 </head>
 <body class="pagina-livro-informa">
-    <header>
-        <section class="d-flex-eve estreita cabecalho-claro ">
-            <a href="index.html"><img class="logo" src="assets/img/logo-branca.png" alt="logo do site"></a>
-            <div class="estreita">
+    <header class="container-fluid">
+        <section class="row  d-flex cabecalho-claro2">
+            <div class="col-lg-5 col-sm-3 d-flex justify-content-center align-items-center">
+                <img class="logo" src="assets/img/logo-branca.png" alt="logo do site">
+            </div>
+
+            <div class="col-lg-6 col-sm-6 d-flex justify-content-center align-items-center">
                 <input id="campo-busca" placeholder="O que você quer ler hoje?">
-                <a href="ver-conta.html"><i class="conta">account_circle</i></a>
+            </div>
+            <div class="col-lg-1 col-sm-3 justify-content-center align-items-center">
+                <a href="ver-conta.html"><i class="conta2">account_circle</i></a>
             </div>
         </section>
 
-        <section class="d-flex cabecalho-escuro">
-            <div class="d-flex estreita">
-                <div class="d-flex navegacao pointer">
-                    <p>Gênero</p>
+        <section class="row cabecalho-escuro2">
+            <div class="col-12 d-flex align-items-center">
+                <div class="d-flex navegacao2 align-items-center">
+                    <p>Genero</p>
                     <i>arrow_drop_down</i>
                 </div>
-                <div class="d-flex navegacao pointer">
+                <div class="d-flex navegacao2 align-items-center">
                     <p>Minha lista</p>
                     <i>list</i>
                 </div>
-                <div class="d-flex navegacao pointer">
+                <div class="d-flex navegacao2 align-items-center">
                     <p>Notificações</p>
                     <i>notifications</i>
                 </div>
@@ -83,11 +90,53 @@
                 
 
                 <div class="botoes">
-                    <p class="agendamento botao-fundo-transparente">Fazer Agendamento</p>
-                    <p class="emprestimo botao-fundo-azul">Fazer Empréstimo</p>
+                    <p id="agenda" class="agendamento botao-fundo-transparente">Fazer Agendamento</p>
+                    <p id="empresta" class="emprestimo botao-fundo-azul">Fazer Empréstimo</p>
                 </div>
             </div>
         </section>
+
+        <script>
+            $("#agenda").on("click", function(){
+                Swal.fire({
+                title: "Quer Agendar?",
+                text: "Você quer fazer o agendamento do livro (nome do livro).",
+                icon: "question",
+                showCancelButton: true,
+                confirmButtonColor: "#4562D6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Agendar"
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                    title: "Agendado!",
+                    text: "Quando o livro estiver disponivel, você será notificado!",
+                    icon: "success"
+                    });
+                }
+                });
+            })
+
+            $("#empresta").on("click", function(){
+                Swal.fire({
+                title: "Fazer Emprestimo?",
+                text: "Você quer fazer o emprestimo do livro (nome do livro).",
+                icon: "question",
+                showCancelButton: true,
+                confirmButtonColor: "#4562D6F",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Emprestar"
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                    title: "Emprestado!",
+                    text: "A devolução ficara para o dia 00/00/0000!",
+                    icon: "success"
+                    });
+                }
+                });
+            })
+        </script>
 
         <section class="reparticao">
             <div class="d-flex estreita">

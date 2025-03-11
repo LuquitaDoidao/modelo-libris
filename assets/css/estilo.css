@@ -479,7 +479,7 @@
             font-size: 15px;
         }
     }
-
+    
     /*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= PAGINA INICIAL - RODAPÉ =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
 
     footer{
@@ -943,7 +943,25 @@
         color: var(--preto);
         background-color: #d9d9d9;
     }
-    
+    @media screen and (max-width: 1025px){
+        .video-bg video{
+            width: 115%;
+
+        }
+    }
+    @media screen and (max-width: 769px){
+        .video-bg video{
+            width: 150%;
+        }
+    }
+    @media screen and (max-width: 426px){
+        .video-bg{
+            display: none;
+        }
+        body{
+            background-image: url(../img/bg-mobile.png);
+        }
+    }
 /*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= DROPZONE =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
 .dropzone {
     width: 300px;

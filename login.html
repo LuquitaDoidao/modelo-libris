@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Login</title>
 </head>
-<body style="background-color: #e4e4e4; " class="overflow-hidden pagina-login">
+<body class="overflow-hidden pagina-login">
 
     <div class="video-bg">
         <video autoplay loop muted>
@@ -20,21 +20,21 @@
 
     <section class="centraliza estreita">
         <div class="quadro-login centraliza estreita coluna">
-            <div class="centraliza coluna divi-1">
+            <div class="estreita coluna divi-1">
                 <img src="assets/img/logo-azul.png" alt="Logo Libris">
                 <h1>LOGIN</h1>
             </div>
 
             <form class="centraliza coluna">
                 <label for="email">Email</label>
-                <input type="email" id="email" class="input-fundo-transparente">
+                <input type="email" id="email" class="input-fundo-transparente" >
 
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" class="input-fundo-transparente">
 
             </form>
 
-            <div class="centraliza coluna divi-2">
+            <div class="estreita coluna divi-2">
                 <button id="btn" class="botao-fundo-azul">Entrar</button>
                 <a href="cadastro.html">Não possue uma conta?</a>                                    
             </div>
@@ -42,11 +42,55 @@
         </div>
     </section>
     <script>
+        // SENHA INVALIDA (Pagina de login)
         $("#btn").on("click", function(){
             
-            let token = "token"
-            localStorage.setItem("token", token)
+            const Toast = Swal.mixin({
+            toast: true,
+            position: "top",
+            showConfirmButton: false,
+            background: "#d72515",
+            iconColor: "#fff",
+            color: "#fff",
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+            });
+            Toast.fire({
+            icon: "error",
+            title: "Senha Invalida"
+            });
         })
+
+        // CONTA INESISTENTE (Pagina de login)
+        $("#btn").on("click", function(){
+            
+            const Toast = Swal.mixin({
+            toast: true,
+            position: "top",
+            showConfirmButton: false,
+            background: "#d72515",
+            iconColor: "#fff",
+            color: "#fff",
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+            });
+            Toast.fire({
+            icon: "error",
+            title: "Essa conta não existe"
+            });
+        })
+
+        
+
+        
     </script>
     <script src="assets/js/animacao-index.js"></script>
 </body>

@@ -92,6 +92,23 @@
     background: linear-gradient(50deg, #647fe9, #3552c4);
 }
 
+.botao-fundo-branco{
+    color: var(--azul-claro);
+    background-color: var(--branco);
+    padding: 7px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-fundo-branco:hover{
+    color: var(--azul-escuro);
+    background-color: var(--cinza);
+}
+
 .botao-fundo-transparente{
     color: var(--azul-claro);
     background-color: transparent;
@@ -106,7 +123,28 @@
 }
 
 .botao-fundo-transparente:hover{
-    border: 3.3px solid var(--azul-claro);
+    border: 3px solid var(--azul-escuro);
+    background-color: #79797939;
+    color: var(--azul-escuro)
+}
+
+.botao-fundo-transparente-branco{
+    color: var(--branco);
+    background-color: transparent;
+    border: 3px solid var(--branco);
+    font-weight: bold;
+    padding: 7px 25px;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-fundo-transparente-branco:hover{
+    border: 3px solid var(--cinza);
+    background-color: #b4b4b428;
+    color: var(--cinza)
 }
 
 /*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= PADRÃO DOS INPUTS =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
@@ -115,6 +153,16 @@
     color: var(--azul-claro);
     background-color: transparent;
     border: 3px solid var(--azul-claro);
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+}
+
+.input-fundo-transparente-branco{
+    color: var(--branco);
+    background-color: transparent;
+    border: 3px solid var(--branco);
     border-radius: 50px;
 
     display: flex;
@@ -882,10 +930,30 @@
         margin-top: 5px;
     }
 
-/*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= PAGINA LOGIN =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
+/*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= PAGINA LOGIN, CADASTRO E CADASTRO BIBLI =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
 
     .pagina-login section{
         max-width: 50%;
+    }
+
+    .pagina-cadastro section{
+        max-width: 50%;
+    }
+
+    .pagina-cadastro-bibli section{
+        max-width: 50%;
+    }
+
+    .pagina-cadastro-bibli .quadro-login{
+        background: var(--degrade-claro);
+        width: 400px;
+        height: 600px;
+        border-radius: 15px;
+        margin-top: 7vh;
+        box-shadow: #979797 0px 5px 25px;
+
+        flex-direction: column;
+        justify-content: center;
     }
 
     .quadro-login{
@@ -895,6 +963,9 @@
         border-radius: 15px;
         margin-top: 7vh;
         box-shadow: #979797 0px 5px 25px;
+
+        flex-direction: column;
+        justify-content: center;
     }
 
     .quadro-login img{
@@ -907,8 +978,16 @@
         letter-spacing: 2px;
     }
 
+    .pagina-cadastro-bibli .quadro-login h1{
+        color: var(--branco)
+    }
+
     .quadro-login .divi-1{
         margin-bottom: 40px;
+    }
+
+    .pagina-cadastro .quadro-login .divi-1{
+        margin-bottom: 10px;
     }
 
     .quadro-login label{
@@ -925,10 +1004,26 @@
         z-index: 10;
     }
 
+    .pagina-cadastro-bibli .quadro-login label{
+        color: var(--branco);
+        background-color: #2A44AA;
+    }
+
     .quadro-login .input-fundo-transparente{
         height: 42px;
         width: 300px;
         padding-left: 10px;
+    }
+
+    .pagina-cadastro-bibli .quadro-login .input-fundo-transparente-branco{
+        height: 42px;
+        width: 300px;
+        padding-left: 10px;
+    }
+
+    .pagina-cadastro-bibli .quadro-login .botao-fundo-branco{
+        height: 42px;
+        width: 170px;
     }
 
     .quadro-login .divi-2{
@@ -939,10 +1034,15 @@
         margin-top: 20px;
     }
 
-    .livro{
-        height: 300px;
-        width: 300px;
+    .pagina-cadastro-bibli .quadro-login .divi-2 a{
+        margin-top: 20px;
+        color: var(--branco)
     }
+
+    .quadro-login .divi-2 .botao-fundo-transparente{
+        margin-top: 10px;
+    }
+
     .video-bg {
         position: fixed;
         top: 0;
@@ -982,6 +1082,10 @@
         }
 
         .pagina-login section{
+            max-width: 50%;
+        }
+
+        .pagina-cadastro section{
             max-width: 50%;
         }
     
@@ -1069,6 +1173,10 @@
         }
 
         .pagina-login section{
+            max-width: 50%;
+        }
+
+        .pagina-cadastro section{
             max-width: 50%;
         }
     
@@ -1161,6 +1269,10 @@
         .pagina-login section{
             max-width: 100%;
         }
+
+        .pagina-cadastro section{
+            max-width: 100%;
+        }
     
         .quadro-login{
             width: 250px;
@@ -1180,10 +1292,14 @@
         .quadro-login .divi-1{
             margin-bottom: 10px;
         }
+
+        .pagina-cadastro .quadro-login .divi-1{
+            margin-bottom: 0px;
+        }
     
         .quadro-login label{
             margin-left: 20px;
-            margin-top: 10px;
+            margin-top: 6px;
             font-weight: bold;
             color: var(--azul-escuro);
             background-color: var(--branco);

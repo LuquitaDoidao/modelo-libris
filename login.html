@@ -10,46 +10,35 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Login</title>
 </head>
-<body style="background-color: #e4e4e4; " class="overflow-hidden">
+<body style="background-color: #e4e4e4; " class="overflow-hidden pagina-login">
+
     <div class="video-bg">
         <video autoplay loop muted>
             <source src="assets/video/libris-login.mp4" type="video/mp4">
         </video>
     </div>    
-    <section class="container">
-        <div class="row">
-            <div class="col-1"></div>
-            <div class="col-4 modal-login centraliza">
-                <div style="background-color: white;" class="col modal-login2">
-                    <div class="centraliza">
-                        <img src="assets/img/logo-azul.png" alt="Logo Libris">
-                    </div>
-                    <div class="centraliza">
-                        <h1>LOGIN</h1>
-                    </div>
-                    <form class="centraliza">
-                        <div class="coluna gap-ss">
-                            <label for="email">Email</label>
-                            <div class="gap-s">
-                                <input type="email" id="email" class="botao-fundo-transparente">
-                                <label for="senha">Senha</label>
-                            </div>
-                            <div class="gap-m">
-                                <input type="password" id="senha" class="botao-fundo-transparente">
-                                <div class="gap-s">
-                                    <div class="centraliza">
-                                        <button id="btn" class="botao-fundo-azul">Entrar</button>
-                                    </div>
-                                    <div class="centraliza">
-                                        <a href="cadastro.html" class="botao-fundo-transparente text-decoration-none">Não possuo uma conta</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+
+    <section class="centraliza estreita">
+        <div class="quadro-login centraliza estreita coluna">
+            <div class="centraliza coluna divi-1">
+                <img src="assets/img/logo-azul.png" alt="Logo Libris">
+                <h1>LOGIN</h1>
             </div>
-            <div class="col-1"></div>
+
+            <form class="centraliza coluna">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input-fundo-transparente">
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" class="input-fundo-transparente">
+
+            </form>
+
+            <div class="centraliza coluna divi-2">
+                <button id="btn" class="botao-fundo-azul">Entrar</button>
+                <a href="cadastro.html">Não possue uma conta?</a>                                    
+            </div>
+        
         </div>
     </section>
     <script>

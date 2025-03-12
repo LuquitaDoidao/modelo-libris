@@ -90,7 +90,6 @@
 .botao-fundo-azul:hover{
     color: var(--branco);
     background: linear-gradient(50deg, #647fe9, #3552c4);
-    padding: 6px 25px;
 }
 
 .botao-fundo-transparente{
@@ -108,7 +107,18 @@
 
 .botao-fundo-transparente:hover{
     border: 3.3px solid var(--azul-claro);
-    padding: 6px 25px;
+}
+
+/*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= PADRÃO DOS INPUTS =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
+
+.input-fundo-transparente{
+    color: var(--azul-claro);
+    background-color: transparent;
+    border: 3px solid var(--azul-claro);
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
 }
 
 
@@ -874,38 +884,61 @@
 
 /*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= PAGINA LOGIN =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
 
-    .modal-login{
-        padding: 50px;
+    .pagina-login section{
+        max-width: 50%;
     }
-    .modal-login img{
-        height: 50px;
-    }  
-    .modal-login2{
-        padding-top: 40px;
-        border-radius: 10px;
-        height: 530px;
+
+    .quadro-login{
+        background-color: var(--branco);
+        width: 400px;
+        height: 600px;
+        border-radius: 15px;
+        margin-top: 7vh;
+        box-shadow: #979797 0px 5px 25px;
     }
-    .modal-login2 button{
-        width: 235px;
+
+    .quadro-login img{
+        width: 150px;
     }
-    .modal-login2 a{
-        width: 235px;
+
+    .quadro-login h1{
+        font-size: 48px;
+        font-weight: bold;
+        letter-spacing: 2px;
     }
-    .gap-ss{
-        display: flex;
-        flex-direction: column;
-        gap: 1px;
+
+    .quadro-login .divi-1{
+        margin-bottom: 40px;
     }
-    .gap-s{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+
+    .quadro-login label{
+        margin-left: 20px;
+        margin-top: 10px;
+        font-weight: bold;
+        color: var(--azul-escuro);
+        background-color: var(--branco);
+        width: 60px;
+        padding: 0px 10px;
+
+        position: relative;
+        top: 12px;
+        z-index: 10;
     }
-    .gap-m{
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
+
+    .quadro-login .input-fundo-transparente{
+        height: 42px;
+        width: 300px;
+        padding-left: 10px;
     }
+
+    .quadro-login .divi-2{
+        margin-top: 30px;
+    }
+
+    .quadro-login .divi-2 a{
+        margin-top: 20px;
+    }
+
     .livro{
         height: 300px;
         width: 300px;
@@ -946,12 +979,175 @@
     @media screen and (max-width: 1025px){
         .video-bg video{
             width: 115%;
+        }
 
+        .pagina-login section{
+            max-width: 50%;
+        }
+    
+        .quadro-login{
+            margin-top: 2vh;
+            width: 320px;
+            height: 500px;
+        }
+    
+        .quadro-login img{
+            width: 100px;
+        }
+    
+        .quadro-login h1{
+            font-size: 38px;
+        }
+    
+        .quadro-login .divi-1{
+            margin-bottom: 0px;
+        }
+    
+        .quadro-login label{
+            margin-left: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: var(--azul-escuro);
+            background-color: var(--branco);
+            width: 60px;
+            padding: 0px 10px;
+    
+            position: relative;
+            top: 12px;
+            z-index: 10;
+        }
+    
+        .quadro-login .input-fundo-transparente{
+            height: 42px;
+            width: 260px;
+            padding-left: 10px;
+        }
+    
+        .quadro-login .divi-2{
+            margin-top: 30px;
+        }
+    
+        .quadro-login .divi-2 a{
+            margin-top: 20px;
+        }
+    
+        .livro{
+            height: 300px;
+            width: 300px;
+        }
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .video-bg video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+        }
+        .cabecalho-claro3 input{
+            height: 47px;
+            width: 500px;
+            border-radius: 25px;
+            background-color: var(--branco);
+            font-size: 19px;
+            padding-left: 15px;
+            color:var(--cinza);
+            outline: none;
+            border-color: var(--azul-escuro);
         }
     }
     @media screen and (max-width: 769px){
         .video-bg video{
             width: 150%;
+        }
+
+        .pagina-login section{
+            max-width: 50%;
+        }
+    
+        .quadro-login{
+            margin-top: 2vh;
+            width: 300px;
+            height: 390px;
+        }
+    
+        .quadro-login img{
+            width: 90px;
+        }
+    
+        .quadro-login h1{
+            font-size: 38px;
+        }
+    
+        .quadro-login .divi-1{
+            margin-bottom: 0px;
+        }
+    
+        .quadro-login label{
+            margin-left: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: var(--azul-escuro);
+            background-color: var(--branco);
+            width: 60px;
+            padding: 0px 10px;
+    
+            position: relative;
+            top: 12px;
+            z-index: 10;
+        }
+    
+        .quadro-login .input-fundo-transparente{
+            height: 42px;
+            width: 260px;
+            padding-left: 10px;
+        }
+    
+        .quadro-login .divi-2{
+            margin-top: 30px;
+        }
+    
+        .quadro-login .divi-2 a{
+            margin-top: 20px;
+        }
+    
+        .livro{
+            height: 300px;
+            width: 300px;
+        }
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .video-bg video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+        }
+        .cabecalho-claro3 input{
+            height: 47px;
+            width: 500px;
+            border-radius: 25px;
+            background-color: var(--branco);
+            font-size: 19px;
+            padding-left: 15px;
+            color:var(--cinza);
+            outline: none;
+            border-color: var(--azul-escuro);
         }
     }
     @media screen and (max-width: 426px){
@@ -960,6 +1156,95 @@
         }
         body{
             background-image: url(../img/bg-mobile.png);
+        }
+
+        .pagina-login section{
+            max-width: 100%;
+        }
+    
+        .quadro-login{
+            width: 250px;
+            height: 460px;
+        }
+    
+        .quadro-login img{
+            width: 100px;
+        }
+    
+        .quadro-login h1{
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+    
+        .quadro-login .divi-1{
+            margin-bottom: 10px;
+        }
+    
+        .quadro-login label{
+            margin-left: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: var(--azul-escuro);
+            background-color: var(--branco);
+            width: 60px;
+            padding: 0px 10px;
+    
+            position: relative;
+            top: 12px;
+            z-index: 10;
+        }
+    
+        .quadro-login .input-fundo-transparente{
+            height: 35px;
+            width: 200px;
+            padding-left: 10px;
+        }
+    
+        .quadro-login .divi-2{
+            margin-top: 30px;
+        }
+    
+        .quadro-login .divi-2 a{
+            margin-top: 20px;
+        }
+    
+        .livro{
+            height: 300px;
+            width: 300px;
+        }
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .video-bg video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+        }
+        .cabecalho-claro3 input{
+            height: 47px;
+            width: 500px;
+            border-radius: 25px;
+            background-color: var(--branco);
+            font-size: 19px;
+            padding-left: 15px;
+            color:var(--cinza);
+            outline: none;
+            border-color: var(--azul-escuro);
+        }
+    
+        .cabecalho-claro3 input:focus{
+            border: 3px solid var(--verde);
+            color: var(--preto);
+            background-color: #d9d9d9;
         }
     }
 /*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= DROPZONE =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/

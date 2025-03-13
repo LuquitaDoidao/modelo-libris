@@ -1088,6 +1088,10 @@
         .pagina-cadastro section{
             max-width: 50%;
         }
+
+        .pagina-cadastro-bibli section{
+            max-width: 50%;
+        }
     
         .quadro-login{
             margin-top: 2vh;
@@ -1166,7 +1170,42 @@
             outline: none;
             border-color: var(--azul-escuro);
         }
+
+        /* pagina cadastro bibliotecario */
+        .pagina-cadastro-bibli section{
+            max-width: 50%;
+        }
+
+        .pagina-cadastro-bibli .quadro-login{
+            margin-top: 2vh;
+            width: 320px;
+            height: 500px;
+        }
+
+        .pagina-cadastro-bibli .quadro-login h1{
+            font-size: 38px;
+        }
+
+        .pagina-cadastro-bibli .quadro-login label{
+            margin-left: 20px;
+            margin-top: 10px;
+            width: 60px;
+            padding: 0px 10px;
+    
+            top: 12px;
+        }
+
+        .pagina-cadastro-bibli .quadro-login .input-fundo-transparente-branco{
+            height: 42px;
+            width: 260px;
+            padding-left: 10px;
+        }
+
+        .pagina-cadastro-bibli .quadro-login .divi-2 a{
+            margin-top: 20px;
+        }
     }
+
     @media screen and (max-width: 769px){
         .video-bg video{
             width: 150%;
@@ -1177,6 +1216,10 @@
         }
 
         .pagina-cadastro section{
+            max-width: 50%;
+        }
+
+        .pagina-cadastro-bibli section{
             max-width: 50%;
         }
     
@@ -1257,7 +1300,42 @@
             outline: none;
             border-color: var(--azul-escuro);
         }
+
+        /* pagina cadastro bibliotecario */
+        .pagina-cadastro-bibli section{
+            max-width: 50%;
+        }
+
+        .pagina-cadastro-bibli .quadro-login{
+            margin-top: 2vh;
+            width: 300px;
+            height: 390px;
+        }
+
+        .pagina-cadastro-bibli .quadro-login h1{
+            font-size: 38px;
+        }
+
+        .pagina-cadastro-bibli .quadro-login label{
+            margin-left: 20px;
+            margin-top: 10px;
+            width: 60px;
+            padding: 0px 10px;
+    
+            top: 12px;
+        }
+
+        .pagina-cadastro-bibli .quadro-login .input-fundo-transparente-branco{
+            height: 42px;
+            width: 260px;
+            padding-left: 10px;
+        }
+
+        .pagina-cadastro-bibli .quadro-login .divi-2 a{
+            margin-top: 20px;
+        }
     }
+    
     @media screen and (max-width: 426px){
         .video-bg{
             display: none;
@@ -1273,7 +1351,7 @@
         .pagina-cadastro section{
             max-width: 100%;
         }
-    
+
         .quadro-login{
             width: 250px;
             height: 460px;
@@ -1285,7 +1363,6 @@
     
         .quadro-login h1{
             font-size: 30px;
-            font-weight: bold;
             letter-spacing: 2px;
         }
     
@@ -1300,15 +1377,10 @@
         .quadro-login label{
             margin-left: 20px;
             margin-top: 6px;
-            font-weight: bold;
-            color: var(--azul-escuro);
-            background-color: var(--branco);
             width: 60px;
             padding: 0px 10px;
     
-            position: relative;
             top: 12px;
-            z-index: 10;
         }
     
         .quadro-login .input-fundo-transparente{
@@ -1361,6 +1433,41 @@
             border: 3px solid var(--verde);
             color: var(--preto);
             background-color: #d9d9d9;
+        }
+
+        /* pagina cadastro bibliotecario */
+        .pagina-cadastro-bibli section{
+            max-width: 100%;
+        }
+
+        .pagina-cadastro-bibli .quadro-login{
+            margin-top: 2vh;
+            width: 250px;
+            height: 460px;
+        }
+
+        .pagina-cadastro-bibli .quadro-login h1{
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+
+        .pagina-cadastro-bibli .quadro-login label{
+            margin-left: 20px;
+            margin-top: 6px;
+            width: 60px;
+            padding: 0px 10px;
+    
+            top: 12px;
+        }
+
+        .pagina-cadastro-bibli .quadro-login .input-fundo-transparente-branco{
+            height: 35px;
+            width: 200px;
+            padding-left: 10px;
+        }
+
+        .pagina-cadastro-bibli .quadro-login .divi-2 a{
+            margin-top: 5px;
         }
     }
 /*=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-= DROPZONE =-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=*/
